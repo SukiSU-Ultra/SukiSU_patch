@@ -22,7 +22,7 @@ inline static U32 size_bytes_count(U32 u)
 	return ((u + BYTE_MAX) >> BYTE_BITS) + 1; /* (u + BYTE_MAX - 1) / BYTE_MAX; */
 }
 
-/* minimum compressd size for non-compressible data */
+/* minimum compressed size for non-compressible data */
 inline static U32 compressd_bytes_min(
 	U32 nr_log2,
 	U32 source_max)
@@ -282,4 +282,4 @@ int lz4k_compress(
 EXPORT_SYMBOL(lz4k_compress);
 
 MODULE_LICENSE("Dual BSD/GPL");
-MODULE_DESCRIPTION("LZ4K compressr");
+MODULE_DESCRIPTION("LZ4K compressor");
