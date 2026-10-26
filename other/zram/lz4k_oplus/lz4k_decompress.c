@@ -108,7 +108,7 @@ static bool literal_decompress(
 			return false;
 
 	} else { /* more literals need to be copied */
-		/* check if there are enough space for copying without out of bounds access */
+		/* check if there is enough space for copying without out of bounds access */
 		if (likely(source_copy_end <= source_end - NR_COPY_MIN &&
 			   dest_copy_end <= dest_end - NR_COPY_MIN)) {
 			LZ4_memcpy(*dest_at, *source_at, NR_COPY_MIN);
@@ -251,4 +251,4 @@ int lz4k_decompress(
 EXPORT_SYMBOL(lz4k_decompress);
 
 MODULE_LICENSE("Dual BSD/GPL");
-MODULE_DESCRIPTION("LZ4K decompressr");
+MODULE_DESCRIPTION("LZ4K decompressor");
